@@ -42,5 +42,6 @@ This is an Astro static site generator blog with:
 - MDX support for enhanced Markdown
 - TypeScript with strict configuration
 - Sharp for image optimization
+- Dark mode toggle with localStorage persistence and system preference detection
 
 When working with blog content, use the `getCollection('blog')` API to retrieve posts programmatically.
