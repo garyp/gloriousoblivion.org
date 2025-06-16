@@ -4,6 +4,7 @@
 import '../styles/global.css';
 import { SITE_TITLE } from '../consts';
 import FallbackImage from '../assets/blog-placeholder-1.jpg';
+import ThemeScript from './ThemeScript.astro';
 import type { ImageMetadata } from 'astro';
 
 interface Props {
@@ -29,6 +30,9 @@ const { title, description, image = FallbackImage } = Astro.props;
 	href={new URL('rss.xml', Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />
+
+<!-- Theme script to prevent FOUC -->
+<ThemeScript />
 
 <!-- Font preloads -->
 <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />

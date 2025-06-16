@@ -1,5 +1,6 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import ThemeToggle from './ThemeToggle.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -10,6 +11,9 @@ import { SITE_TITLE } from '../consts';
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
+		</div>
+		<div class="nav-actions">
+			<ThemeToggle />
 		</div>
 		<div class="social-links">
 			<a href="https://m.webtoo.ls/@astro" target="_blank">
@@ -48,6 +52,12 @@ import { SITE_TITLE } from '../consts';
 		padding: 0 1em;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
+		transition: background-color 0.2s ease;
+	}
+	
+	:global(.dark) header {
+		background: rgb(var(--gray-dark));
+		color: rgb(var(--gray-light));
 	}
 	h2 {
 		margin: 0;
@@ -62,6 +72,13 @@ import { SITE_TITLE } from '../consts';
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		gap: 1rem;
+	}
+	
+	.nav-actions {
+		display: flex;
+		align-items: center;
+		margin: 0 0.5rem;
 	}
 	nav a {
 		padding: 1em 0.5em;
@@ -72,6 +89,10 @@ import { SITE_TITLE } from '../consts';
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
+	}
+	
+	:global(.dark) nav a {
+		color: rgb(var(--gray-light));
 	}
 	.social-links,
 	.social-links a {
