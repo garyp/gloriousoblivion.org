@@ -14,52 +14,61 @@
   </svg>
 </button>
 
-<script>
+<script is:inline>
   // Theme toggle functionality
-  const themeToggle = document.getElementById('theme-toggle');
-  const darkIcon = document.getElementById('theme-toggle-dark-icon');
-  const lightIcon = document.getElementById('theme-toggle-light-icon');
-  
-  // Early exit if elements not found
-  if (!themeToggle || !darkIcon || !lightIcon) {
-    console.error('Theme toggle elements not found');
-    return;
-  }
-  
-  // Check for saved theme preference or default to system preference
-  const savedTheme = localStorage.getItem('theme');
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  let currentTheme: string = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-  
-  // Apply theme
-  function setTheme(theme: string): void {
-    currentTheme = theme;
-    localStorage.setItem('theme', theme);
+  function initThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const darkIcon = document.getElementById('theme-toggle-dark-icon');
+    const lightIcon = document.getElementById('theme-toggle-light-icon');
     
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-      darkIcon!.classList.add('hidden');
-      lightIcon!.classList.remove('hidden');
-    } else {
-      document.documentElement.classList.remove('dark');
-      lightIcon!.classList.add('hidden');
-      darkIcon!.classList.remove('hidden');
+    // Early exit if elements not found
+    if (!themeToggle || !darkIcon || !lightIcon) {
+      console.error('Theme toggle elements not found');
+      return;
     }
+    
+    // Check for saved theme preference or default to system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    let currentTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    
+    // Apply theme
+    function setTheme(theme) {
+      currentTheme = theme;
+      localStorage.setItem('theme', theme);
+      
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+        darkIcon.classList.add('hidden');
+        lightIcon.classList.remove('hidden');
+      } else {
+        document.documentElement.classList.remove('dark');
+        lightIcon.classList.add('hidden');
+        darkIcon.classList.remove('hidden');
+      }
+    }
+    
+    // Initialize theme
+    setTheme(currentTheme);
+    
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+      setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+    });
+    
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      if (!localStorage.getItem('theme')) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    });
   }
-  
-  // Initialize theme
-  setTheme(currentTheme);
-  
-  // Toggle theme on button click
-  themeToggle.addEventListener('click', () => {
-    setTheme(currentTheme === 'dark' ? 'light' : 'dark');
-  });
-  
-  // Listen for system theme changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('theme')) {
-      setTheme(e.matches ? 'dark' : 'light');
-    }
-  });
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initThemeToggle);
+  } else {
+    initThemeToggle();
+  }
 </script>
