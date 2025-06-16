@@ -13,6 +13,19 @@
 		0 16px 32px rgba(var(--gray), 33%);
 }
 
+.dark {
+	--accent: #6366f1;
+	--accent-dark: #4f46e5;
+	--black: 255, 255, 255;
+	--gray: 156, 163, 175;
+	--gray-light: 55, 65, 81;
+	--gray-dark: 209, 213, 219;
+	--gray-gradient: rgba(var(--gray-light), 50%), #111827;
+	--box-shadow:
+		0 2px 6px rgba(0, 0, 0, 25%), 0 8px 24px rgba(0, 0, 0, 33%),
+		0 16px 32px rgba(0, 0, 0, 33%);
+}
+
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -31,23 +44,23 @@
 
 /* Prose content styles */
 .prose-content h1 {
-	@apply text-5xl text-gray-900 leading-tight mb-2;
+	@apply text-5xl text-gray-900 dark:text-gray-100 leading-tight mb-2;
 }
 
 .prose-content h2 {
-	@apply text-4xl text-gray-900 leading-tight mb-2;
+	@apply text-4xl text-gray-900 dark:text-gray-100 leading-tight mb-2;
 }
 
 .prose-content h3 {
-	@apply text-3xl text-gray-900 leading-tight mb-2;
+	@apply text-3xl text-gray-900 dark:text-gray-100 leading-tight mb-2;
 }
 
 .prose-content h4 {
-	@apply text-2xl text-gray-900 leading-tight mb-2;
+	@apply text-2xl text-gray-900 dark:text-gray-100 leading-tight mb-2;
 }
 
 .prose-content h5 {
-	@apply text-xl text-gray-900 leading-tight mb-2;
+	@apply text-xl text-gray-900 dark:text-gray-100 leading-tight mb-2;
 }
 
 .prose-content p {
@@ -60,7 +73,7 @@
 }
 
 .prose-content a {
-	@apply text-blue-600 hover:text-blue-600;
+	@apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300;
 }
 
 .prose-content textarea {
@@ -80,7 +93,7 @@
 }
 
 .prose-content code {
-	@apply px-1 py-0.5 bg-gray-200 rounded-sm;
+	@apply px-1 py-0.5 bg-gray-200 dark:bg-gray-700 dark:text-gray-100 rounded-sm;
 }
 
 .prose-content pre {
@@ -88,15 +101,15 @@
 }
 
 .prose-content pre code {
-	@apply p-0 bg-transparent;
+	@apply p-0 bg-transparent text-inherit;
 }
 
 .prose-content blockquote {
-	@apply border-l-4 border-blue-600 pl-5 m-0 text-2xl;
+	@apply border-l-4 border-blue-600 dark:border-blue-400 pl-5 m-0 text-2xl;
 }
 
 .prose-content hr {
-	@apply border-0 border-t border-gray-200;
+	@apply border-0 border-t border-gray-200 dark:border-gray-700;
 }
 
 /* Screen reader only class */

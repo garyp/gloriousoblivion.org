@@ -1,20 +1,22 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import ThemeToggle from './ThemeToggle.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="m-0 px-4 bg-white shadow-sm">
+<header class="m-0 px-4 bg-white dark:bg-gray-900 shadow-sm">
 	<nav class="flex items-center justify-between">
 		<h2 class="m-0 text-base">
-			<a href="/" class="no-underline py-4 px-2 text-gray-800 border-b-4 border-transparent">{SITE_TITLE}</a>
+			<a href="/" class="no-underline py-4 px-2 text-gray-800 dark:text-gray-200 border-b-4 border-transparent">{SITE_TITLE}</a>
 		</h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
-		<div class="social-links flex max-sm:hidden">
-			<a href="https://m.webtoo.ls/@astro" target="_blank" class="flex py-4 px-2 text-gray-800 border-b-4 border-transparent no-underline">
+		<div class="social-links flex items-center gap-2 max-sm:hidden">
+			<ThemeToggle />
+			<a href="https://m.webtoo.ls/@astro" target="_blank" class="flex py-4 px-2 text-gray-800 dark:text-gray-200 border-b-4 border-transparent no-underline">
 				<span class="sr-only">Follow Astro on Mastodon</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
@@ -23,7 +25,7 @@ import { SITE_TITLE } from '../consts';
 					></path></svg
 				>
 			</a>
-			<a href="https://twitter.com/astrodotbuild" target="_blank" class="flex py-4 px-2 text-gray-800 border-b-4 border-transparent no-underline">
+			<a href="https://twitter.com/astrodotbuild" target="_blank" class="flex py-4 px-2 text-gray-800 dark:text-gray-200 border-b-4 border-transparent no-underline">
 				<span class="sr-only">Follow Astro on Twitter</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
@@ -32,7 +34,7 @@ import { SITE_TITLE } from '../consts';
 					></path></svg
 				>
 			</a>
-			<a href="https://github.com/withastro/astro" target="_blank" class="flex py-4 px-2 text-gray-800 border-b-4 border-transparent no-underline">
+			<a href="https://github.com/withastro/astro" target="_blank" class="flex py-4 px-2 text-gray-800 dark:text-gray-200 border-b-4 border-transparent no-underline">
 				<span class="sr-only">Go to Astro's GitHub repo</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path

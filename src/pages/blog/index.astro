@@ -13,11 +13,11 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <!doctype html>
-<html lang="en" class="font-['Atkinson',sans-serif] m-0 p-0 text-left bg-gradient-to-b from-gray-100/50 to-white bg-no-repeat text-gray-700 text-xl leading-relaxed break-words">
+<html lang="en" class="font-['Atkinson',sans-serif] m-0 p-0 text-left bg-gradient-to-b from-gray-100/50 to-white dark:from-gray-800/50 dark:to-gray-900 bg-no-repeat text-gray-700 dark:text-gray-300 text-xl leading-relaxed break-words">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body class="font-['Atkinson',sans-serif] m-0 p-0 text-left bg-gradient-to-b from-gray-100/50 to-white bg-no-repeat text-gray-700 text-xl leading-relaxed break-words">
+	<body class="font-['Atkinson',sans-serif] m-0 p-0 text-left bg-gradient-to-b from-gray-100/50 to-white dark:from-gray-800/50 dark:to-gray-900 bg-no-repeat text-gray-700 dark:text-gray-300 text-xl leading-relaxed break-words">
 		<Header />
 		<main class="w-[960px] max-w-[calc(100%-2rem)] mx-auto py-12 px-4 max-sm:p-4 max-sm:text-lg">
 			<section>
@@ -25,12 +25,12 @@ const posts = (await getCollection('blog')).sort(
 					{
 						posts.map((post, index) => (
 							<li class={`${index === 0 ? 'w-full mb-4 text-center max-sm:mb-0' : 'w-[calc(50%-1rem)] max-sm:w-full max-sm:text-center'}`}>
-								<a href={`/blog/${post.id}/`} class="block no-underline transition-all duration-200 hover:text-blue-600">
+								<a href={`/blog/${post.id}/`} class="block no-underline transition-all duration-200 hover:text-blue-600 dark:hover:text-blue-400">
 									{post.data.heroImage && (
 										<Image width={720} height={360} src={post.data.heroImage} alt="" class={`mb-2 rounded-xl hover:shadow-lg transition-shadow duration-200 ${index === 0 ? 'w-full' : ''}`} />
 									)}
-									<h4 class={`title m-0 text-gray-900 leading-none ${index === 0 ? 'text-4xl max-sm:text-2xl' : ''}`}>{post.data.title}</h4>
-									<p class="date m-0 text-gray-500">
+									<h4 class={`title m-0 text-gray-900 dark:text-gray-100 leading-none ${index === 0 ? 'text-4xl max-sm:text-2xl' : ''}`}>{post.data.title}</h4>
+									<p class="date m-0 text-gray-500 dark:text-gray-400">
 										<FormattedDate date={post.data.pubDate} />
 									</p>
 								</a>
