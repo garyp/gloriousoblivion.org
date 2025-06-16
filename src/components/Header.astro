@@ -4,19 +4,21 @@ import ThemeToggle from './ThemeToggle.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+<header class="m-0 px-4 bg-white shadow-md transition-colors duration-200 dark:bg-gray-800 dark:text-gray-200">
+	<nav class="flex items-center justify-between gap-4">
+		<h2 class="m-0 text-base">
+			<a href="/" class="no-underline text-gray-900 dark:text-gray-100">{SITE_TITLE}</a>
+		</h2>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
 		</div>
-		<div class="nav-actions">
+		<div class="flex items-center mx-2">
 			<ThemeToggle />
 		</div>
-		<div class="social-links">
-			<a href="https://m.webtoo.ls/@astro" target="_blank">
+		<div class="social-links flex md:flex hidden">
+			<a href="https://m.webtoo.ls/@astro" target="_blank" class="flex text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors duration-200">
 				<span class="sr-only">Follow Astro on Mastodon</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
@@ -25,7 +27,7 @@ import { SITE_TITLE } from '../consts';
 					></path></svg
 				>
 			</a>
-			<a href="https://twitter.com/astrodotbuild" target="_blank">
+			<a href="https://twitter.com/astrodotbuild" target="_blank" class="flex text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors duration-200">
 				<span class="sr-only">Follow Astro on Twitter</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
@@ -34,7 +36,7 @@ import { SITE_TITLE } from '../consts';
 					></path></svg
 				>
 			</a>
-			<a href="https://github.com/withastro/astro" target="_blank">
+			<a href="https://github.com/withastro/astro" target="_blank" class="flex text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 transition-colors duration-200">
 				<span class="sr-only">Go to Astro's GitHub repo</span>
 				<svg viewBox="0 0 16 16" aria-hidden="true" width="32" height="32"
 					><path
@@ -46,61 +48,3 @@ import { SITE_TITLE } from '../consts';
 		</div>
 	</nav>
 </header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-		transition: background-color 0.2s ease;
-	}
-	
-	:global(.dark) header {
-		background: rgb(var(--gray-dark));
-		color: rgb(var(--gray-light));
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 1rem;
-	}
-	
-	.nav-actions {
-		display: flex;
-		align-items: center;
-		margin: 0 0.5rem;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	
-	:global(.dark) nav a {
-		color: rgb(var(--gray-light));
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
-</style>
