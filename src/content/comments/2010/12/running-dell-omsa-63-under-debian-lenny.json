@@ -5,7 +5,7 @@
     "createdBy": {
       "fullName": "Tin"
     },
-    "html": "Nice work... I now have OMSA running on my server... Didn't think that was ever going to happen.\nI did mine on Proxmox VE which is based on Debian Lenny AMD64. Couldn't upgrade the whole thing to Squeeze, so this is really nice.\n\nSome notes from my install:\n1. I chose to simply chroot into the dir once I had the basics in there. Saved typing \"chroot /whatever\" before every command.\n2. I had to also install the libsmbios2 package from Ubuntu with the other ones.\n3. Step 10 is a little vague - It should say to chroot into the dir and follow the instructions from Dell's repo (but with the sudos removed).",
+    "html": "Nice work... I now have OMSA running on my server... Didn't think that was ever going to happen.<br/> I did mine on Proxmox VE which is based on Debian Lenny AMD64. Couldn't upgrade the whole thing to Squeeze, so this is really nice.<br/><br/> Some notes from my install:<br/> 1. I chose to simply chroot into the dir once I had the basics in there. Saved typing \"chroot /whatever\" before every command.<br/> 2. I had to also install the libsmbios2 package from Ubuntu with the other ones.<br/> 3. Step 10 is a little vague - It should say to chroot into the dir and follow the instructions from Dell's repo (but with the sudos removed).",
     "publishedAt": "2010-12-29T02:08:06.274Z"
   },
   {
@@ -14,7 +14,7 @@
     "createdBy": {
       "fullName": "gary"
     },
-    "html": "FYI, I've posted <a href=\"../../2011/03/running-dell-omsa-65-under-debian-lenny\" rel=\"nofollow\">updated instructions for OMSA 6.5</a>.\nAlso, if anyone is still using the instructions in this post, there is a missing step. Step 8 should also add the Dell apt repository to sources.list.",
+    "html": "FYI, I've posted <a href=\"../../2011/03/running-dell-omsa-65-under-debian-lenny\" rel=\"nofollow\">updated instructions for OMSA 6.5</a>.<br/> Also, if anyone is still using the instructions in this post, there is a missing step. Step 8 should also add the Dell apt repository to sources.list.",
     "publishedAt": "2011-03-30T03:50:14.121Z"
   }
 ]

@@ -5,7 +5,7 @@
     "createdBy": {
       "fullName": "T"
     },
-    "html": "html'>Thanks for the guide.  One note though - When creating /usr/local/bin/squeeze-amd64 the shell variables need to be escaped, otherwise you'll create a broken script.",
+    "html": "Thanks for the guide.  One note though - When creating /usr/local/bin/squeeze-amd64 the shell variables need to be escaped, otherwise you'll create a broken script.",
     "publishedAt": "2011-05-31T18:27:22.401Z"
   },
   {

@@ -22,6 +22,6 @@ const comments = (await getCollection('comments',
 );
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} comments={comments}>
 	<Content />
 </BlogPost>

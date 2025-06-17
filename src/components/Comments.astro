@@ -1,0 +1,33 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import FormattedDate from './FormattedDate.astro';
+
+export interface Props {
+	comments: CollectionEntry<'comments'>['data'];
+}
+
+const { comments } = Astro.props;
+
+if (!comments || comments.length === 0) {
+	return null;
+}
+---
+
+<section class="comments mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+	<h2 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100">Comments ({comments.length})</h2>
+	<div class="space-y-6">
+		{comments.map((comment) => (
+			<div class="comment bg-gray-50 dark:bg-gray-800 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
+				<div class="comment-header flex items-center justify-between mb-3">
+					<div class="comment-author font-semibold text-gray-900 dark:text-gray-100">
+						{comment.createdBy.fullName}
+					</div>
+					<div class="comment-date text-sm text-gray-500 dark:text-gray-400">
+						<FormattedDate date={comment.publishedAt} />
+					</div>
+				</div>
+				<div class="comment-content text-gray-700 dark:text-gray-300" set:html={comment.html} />
+			</div>
+		))}
+	</div>
+</section>
