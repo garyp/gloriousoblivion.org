@@ -24,12 +24,12 @@ const posts = (await getCollection('blog')).sort(
 				<ul class="flex flex-wrap gap-8 list-none m-0 p-0 max-sm:gap-2">
 					{
 						posts.map((post, index) => (
-							<li class={`${index === 0 ? 'w-full mb-4 text-center max-sm:mb-0' : 'w-[calc(50%-1rem)] max-sm:w-full max-sm:text-center'}`}>
+							<li class="w-full text-center">
 								<a href={`/blog/${post.id}/`} class="block no-underline transition-all duration-200 hover:text-blue-600 dark:hover:text-blue-400">
 									{post.data.heroImage && (
 										<Image width={720} height={360} src={post.data.heroImage} alt="" class={`mb-2 rounded-xl hover:shadow-lg transition-shadow duration-200 ${index === 0 ? 'w-full' : ''}`} />
 									)}
-									<h4 class={`title m-0 text-gray-900 dark:text-gray-100 leading-none ${index === 0 ? 'text-4xl max-sm:text-2xl' : ''}`}>{post.data.title}</h4>
+									<h4 class="title m-0 text-gray-900 dark:text-gray-100 leading-none">{post.data.title}</h4>
 									<p class="date m-0 text-gray-500 dark:text-gray-400">
 										<FormattedDate date={post.data.pubDate} />
 									</p>
