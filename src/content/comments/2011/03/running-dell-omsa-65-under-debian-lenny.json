@@ -1,0 +1,20 @@
+[
+  {
+    "id": "tag:blogger.com,1999:blog-288842918804161933.post-2128307641288089087",
+    "parentId": null,
+    "createdBy": {
+      "fullName": "T"
+    },
+    "html": "html'>Thanks for the guide.  One note though - When creating /usr/local/bin/squeeze-amd64 the shell variables need to be escaped, otherwise you'll create a broken script.",
+    "publishedAt": "2011-05-31T18:27:22.401Z"
+  },
+  {
+    "id": "tag:blogger.com,1999:blog-288842918804161933.post-5999644649796999497",
+    "parentId": null,
+    "createdBy": {
+      "fullName": "gary"
+    },
+    "html": "Good catch T! (I had just created the script in vim, so the instructions hadn't been tested). I've updated the post to put quotes around EOF, which will prevent the variable expansion.",
+    "publishedAt": "2011-06-02T01:12:55.389Z"
+  }
+]

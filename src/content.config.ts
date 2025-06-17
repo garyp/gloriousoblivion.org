@@ -15,4 +15,21 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+const comments = defineCollection({
+	// Load JSON files in the `src/content/comments/` directory.
+	loader: glob({ base: './src/content/comments', pattern: '**/*.json' }),
+	// Type-check frontmatter using a schema
+	schema: z.array(
+		z.object({
+			id: z.string(),
+			parentId: z.string().nullish(),
+			createdBy: z.object({
+				fullName: z.string(),
+			}),
+			html: z.string(),
+			publishedAt: z.coerce.date(),
+		})
+	),
+});
+
+export const collections = { blog, comments };
