@@ -15,6 +15,19 @@
 </button>
 
 <script is:inline>
+  // Apply theme immediately to prevent flash
+  (function() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
+    
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+
   // Theme toggle functionality
   function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
@@ -47,9 +60,11 @@
         lightIcon.classList.add('hidden');
         darkIcon.classList.remove('hidden');
       }
+      
+      console.log('Theme set to:', theme, 'Dark class present:', document.documentElement.classList.contains('dark'));
     }
     
-    // Initialize theme
+    // Initialize theme and icons
     setTheme(currentTheme);
     
     // Toggle theme on button click

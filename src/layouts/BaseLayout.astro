@@ -1,0 +1,33 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+export interface Props {
+	title: string;
+	description: string;
+	containerWidth?: 'narrow' | 'wide' | 'full';
+}
+
+const { title, description, containerWidth = 'narrow' } = Astro.props;
+
+const containerClasses = {
+	narrow: 'w-[720px] max-w-[calc(100%-2rem)] mx-auto py-12 px-4 max-sm:p-4 max-sm:text-lg',
+	wide: 'w-[960px] max-w-[calc(100%-2rem)] mx-auto py-12 px-4 max-sm:p-4 max-sm:text-lg',
+	full: 'w-full max-w-full m-0'
+};
+---
+
+<!doctype html>
+<html lang="en" class="font-['Atkinson',sans-serif] m-0 p-0 text-left bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-200 leading-relaxed break-words">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="font-['Atkinson',sans-serif] m-0 p-0 text-left bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-200 leading-relaxed break-words">
+		<Header class="text-xl"/>
+		<main class={containerClasses[containerWidth]}>
+			<slot />
+		</main>
+		<Footer />
+	</body>
+</html>

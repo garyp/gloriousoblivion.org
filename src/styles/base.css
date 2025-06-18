@@ -1,4 +1,30 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@variant dark (.dark &);
+
+/* Override prose colors for better visibility */
+.prose {
+  --tw-prose-bullets: oklch(37.3% .034 259.733) !important; /* Make bullets darker */
+}
+
+.dark .prose {
+  --tw-prose-bullets: oklch(70.7% .022 261.325) !important; /* Make bullets lighter in dark mode */
+}
+
+/* Dark mode improvements for better contrast */
+.dark {
+  /* Darker backgrounds for better contrast */
+  --color-gray-800: oklch(20% .02 256.848);
+  --color-gray-900: oklch(15% .02 264.665);
+}
+
+/* Ensure prose text has good contrast in dark mode */
+.dark .prose {
+  --tw-prose-body: oklch(85% .01 258.338);
+  --tw-prose-headings: oklch(95% .005 264.542);
+  --tw-prose-links: oklch(80% .15 250);
+}
 
 :root {
 	--accent: #2337ff;
@@ -42,75 +68,6 @@
 	font-display: swap;
 }
 
-/* Prose content styles */
-.prose-content h1 {
-	@apply text-5xl text-gray-900 dark:text-gray-100 leading-tight mb-2;
-}
-
-.prose-content h2 {
-	@apply text-4xl text-gray-900 dark:text-gray-100 leading-tight mb-2;
-}
-
-.prose-content h3 {
-	@apply text-3xl text-gray-900 dark:text-gray-100 leading-tight mb-2;
-}
-
-.prose-content h4 {
-	@apply text-2xl text-gray-900 dark:text-gray-100 leading-tight mb-2;
-}
-
-.prose-content h5 {
-	@apply text-xl text-gray-900 dark:text-gray-100 leading-tight mb-2;
-}
-
-.prose-content p {
-	@apply mb-8;
-}
-
-.prose-content strong,
-.prose-content b {
-	@apply font-bold;
-}
-
-.prose-content a {
-	@apply text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300;
-}
-
-.prose-content textarea {
-	@apply w-full text-base;
-}
-
-.prose-content input {
-	@apply text-base;
-}
-
-.prose-content table {
-	@apply w-full;
-}
-
-.prose-content img {
-	@apply max-w-full h-auto rounded-lg;
-}
-
-.prose-content code {
-	@apply px-1 py-0.5 bg-gray-200 dark:bg-gray-700 dark:text-gray-100 rounded-sm;
-}
-
-.prose-content pre {
-	@apply p-6 rounded-lg;
-}
-
-.prose-content pre code {
-	@apply p-0 bg-transparent text-inherit;
-}
-
-.prose-content blockquote {
-	@apply border-l-4 border-blue-600 dark:border-blue-400 pl-5 m-0 text-2xl;
-}
-
-.prose-content hr {
-	@apply border-0 border-t border-gray-200 dark:border-gray-700;
-}
 
 /* Screen reader only class */
 .sr-only {
