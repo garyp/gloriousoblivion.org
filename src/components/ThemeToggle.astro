@@ -3,7 +3,10 @@
 
 <button
   id="theme-toggle"
-  class="flex items-center justify-center w-10 h-10 text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+  class="flex items-center justify-center w-10 h-10 rounded-lg transition-colors"
+  style="color: var(--text-primary);"
+  onmouseover="this.style.backgroundColor='var(--bg-secondary)'"
+  onmouseout="this.style.backgroundColor='transparent'"
   aria-label="Toggle dark mode"
 >
   <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

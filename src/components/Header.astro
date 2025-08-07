@@ -4,10 +4,10 @@ import ThemeToggle from './ThemeToggle.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
-<header class="m-0 px-4 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 text-xl sticky top-0 z-50">
+<header class="m-0 px-4 backdrop-blur-sm border-b text-xl sticky top-0 z-50" style="background-color: color-mix(in srgb, var(--bg-primary) 80%, transparent); border-color: var(--border-subtle);">
 	<nav class="flex items-center justify-between max-w-7xl mx-auto">
 		<h2 class="m-0 text-base">
-			<a href="/" class="no-underline py-4 px-2 text-gray-800 dark:text-gray-200 border-b-4 border-transparent font-bold tracking-tight hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">{SITE_TITLE}</a>
+			<a href="/" class="no-underline py-4 px-2 border-b-4 border-transparent font-bold tracking-tight transition-colors duration-200" style="color: var(--text-primary);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-primary)'">{SITE_TITLE}</a>
 		</h2>
 		<div class="flex items-center gap-1">
 			<HeaderLink href="/">Home</HeaderLink>

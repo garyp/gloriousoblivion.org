@@ -3,40 +3,79 @@
 
 @variant dark (.dark &);
 
-/* Override prose colors for better visibility */
+/* Override prose colors for sloth theme */
 .prose {
-  --tw-prose-bullets: oklch(37.3% .034 259.733) !important; /* Make bullets darker */
+  --tw-prose-body: var(--text-primary);
+  --tw-prose-headings: var(--text-primary);
+  --tw-prose-lead: var(--text-secondary);
+  --tw-prose-links: var(--primary);
+  --tw-prose-bold: var(--text-primary);
+  --tw-prose-counters: var(--text-muted);
+  --tw-prose-bullets: var(--accent-warm);
+  --tw-prose-hr: var(--border-subtle);
+  --tw-prose-quotes: var(--text-muted);
+  --tw-prose-quote-borders: var(--accent-warm);
+  --tw-prose-captions: var(--text-muted);
+  --tw-prose-code: var(--accent-wood);
+  --tw-prose-pre-code: var(--text-primary);
+  --tw-prose-pre-bg: var(--bg-secondary);
+  --tw-prose-th-borders: var(--border-subtle);
+  --tw-prose-td-borders: var(--border-subtle);
 }
 
 .dark .prose {
-  --tw-prose-bullets: oklch(70.7% .022 261.325) !important; /* Make bullets lighter in dark mode */
+  --tw-prose-body: var(--text-primary);
+  --tw-prose-headings: var(--text-primary);
+  --tw-prose-lead: var(--text-secondary);
+  --tw-prose-links: var(--primary-light);
+  --tw-prose-bold: var(--text-primary);
+  --tw-prose-counters: var(--text-muted);
+  --tw-prose-bullets: var(--accent-warm);
+  --tw-prose-hr: var(--border-subtle);
+  --tw-prose-quotes: var(--text-muted);
+  --tw-prose-quote-borders: var(--accent-warm);
+  --tw-prose-captions: var(--text-muted);
+  --tw-prose-code: var(--accent-wood);
+  --tw-prose-pre-code: var(--text-primary);
+  --tw-prose-pre-bg: var(--bg-secondary);
+  --tw-prose-th-borders: var(--border-subtle);
+  --tw-prose-td-borders: var(--border-subtle);
 }
 
-/* Dark mode improvements for better contrast */
-.dark {
-  /* Darker backgrounds for better contrast */
-  --color-gray-800: oklch(20% .02 256.848);
-  --color-gray-900: oklch(15% .02 264.665);
-}
-
-/* Ensure prose text has good contrast in dark mode */
-.dark .prose {
-  --tw-prose-body: oklch(85% .01 258.338);
-  --tw-prose-headings: oklch(95% .005 264.542);
-  --tw-prose-links: oklch(80% .15 250);
-}
 
 :root {
-	--accent: #2337ff;
-	--accent-dark: #000d8a;
-	--black: 15, 18, 25;
-	--gray: 96, 115, 159;
-	--gray-light: 229, 233, 240;
-	--gray-dark: 34, 41, 57;
-	--gray-gradient: rgba(var(--gray-light), 50%), #fff;
+	/* Sloth-inspired color palette - Light Theme */
+	--primary: #228B22;
+	--primary-light: #32CD32;
+	--primary-dark: #006400;
+	--accent: #228B22;
+	--accent-dark: #006400;
+	--accent-light: #32CD32;
+	
+	/* Background Colors */
+	--bg-primary: #FAEBD7;
+	--bg-secondary: #F5DEB3;
+	--bg-accent: #FFF8DC;
+	
+	/* Text Colors */
+	--text-primary: #2F4F2F;
+	--text-secondary: #556B2F;
+	--text-muted: #8B4513;
+	
+	/* Accent Colors */
+	--accent-warm: #CD853F;
+	--accent-wood: #D2691E;
+	--accent-leaf: #ADFF2F;
+	
+	/* Legacy support for existing components */
+	--black: 47, 79, 79; /* Dark Slate Gray RGB */
+	--gray: 139, 69, 19; /* Saddle Brown RGB */
+	--gray-light: 245, 222, 179; /* Wheat RGB */
+	--gray-dark: 47, 79, 79; /* Dark Slate Gray RGB */
+	--gray-gradient: rgba(245, 222, 179, 50%), var(--bg-primary);
 	--box-shadow:
-		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
-		0 16px 32px rgba(var(--gray), 33%);
+		0 2px 6px rgba(139, 69, 19, 25%), 0 8px 24px rgba(139, 69, 19, 33%),
+		0 16px 32px rgba(139, 69, 19, 33%);
 	
 	/* Enhanced typography and visual rhythm */
 	--text-xs: 0.75rem;
@@ -65,32 +104,48 @@
 	--space-2xl: 3rem;
 	--space-3xl: 4rem;
 	
-	/* Enhanced color palette */
-	--text-primary: oklch(15% .01 264.665);
-	--text-secondary: oklch(45% .02 258.338);
-	--text-muted: oklch(65% .015 259.733);
-	--border-subtle: oklch(90% .005 264.542);
-	--surface-elevated: oklch(98% .002 264.542);
+	/* Enhanced color palette using new theme colors */
+	--border-subtle: var(--bg-secondary);
+	--surface-elevated: var(--bg-accent);
 }
 
 .dark {
-	--accent: #6366f1;
-	--accent-dark: #4f46e5;
-	--black: 255, 255, 255;
-	--gray: 156, 163, 175;
-	--gray-light: 55, 65, 81;
-	--gray-dark: 209, 213, 219;
-	--gray-gradient: rgba(var(--gray-light), 50%), #111827;
-	--box-shadow:
-		0 2px 6px rgba(0, 0, 0, 25%), 0 8px 24px rgba(0, 0, 0, 33%),
-		0 16px 32px rgba(0, 0, 0, 33%);
+	/* Sloth-inspired color palette - Dark Theme */
+	--primary: #32CD32;
+	--primary-light: #ADFF2F;
+	--primary-dark: #228B22;
+	--accent: #32CD32;
+	--accent-dark: #228B22;
+	--accent-light: #ADFF2F;
 	
-	/* Enhanced dark mode color palette */
-	--text-primary: oklch(95% .005 264.542);
-	--text-secondary: oklch(75% .015 258.338);
-	--text-muted: oklch(55% .02 259.733);
-	--border-subtle: oklch(25% .02 256.848);
-	--surface-elevated: oklch(18% .015 264.665);
+	/* Background Colors */
+	--bg-primary: #1C1C1C;
+	--bg-secondary: #2D2D2D;
+	--bg-accent: #3A3A3A;
+	
+	/* Text Colors */
+	--text-primary: #F5DEB3;
+	--text-secondary: #DEB887;
+	--text-muted: #A0522D;
+	
+	/* Accent Colors */
+	--accent-warm: #CD853F;
+	--accent-wood: #D2691E;
+	--accent-leaf: #90EE90;
+	
+	/* Legacy support for existing components */
+	--black: 245, 222, 179; /* Beige RGB for text */
+	--gray: 160, 82, 45; /* Sienna RGB */
+	--gray-light: 58, 58, 58; /* Dark Gray RGB */
+	--gray-dark: 222, 184, 135; /* Burlywood RGB */
+	--gray-gradient: rgba(58, 58, 58, 50%), var(--bg-primary);
+	--box-shadow:
+		0 2px 6px rgba(0, 0, 0, 40%), 0 8px 24px rgba(0, 0, 0, 50%),
+		0 16px 32px rgba(0, 0, 0, 60%);
+	
+	/* Enhanced dark mode color palette using new theme colors */
+	--border-subtle: var(--bg-secondary);
+	--surface-elevated: var(--bg-accent);
 }
 
 @font-face {

@@ -19,11 +19,11 @@ const containerClasses = {
 ---
 
 <!doctype html>
-<html lang="en" class="font-['Atkinson',sans-serif] m-0 p-0 text-left bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-200 leading-relaxed break-words">
+<html lang="en" class="font-['Atkinson',sans-serif] m-0 p-0 text-left leading-relaxed break-words" style="background-color: var(--bg-primary); color: var(--text-primary);">
 	<head>
 		<BaseHead title={title} description={description} />
 	</head>
-	<body class="font-['Atkinson',sans-serif] m-0 p-0 text-left bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-200 leading-relaxed break-words">
+	<body class="font-['Atkinson',sans-serif] m-0 p-0 text-left leading-relaxed break-words" style="background-color: var(--bg-primary); color: var(--text-primary);">
 		<Header class="text-xl"/>
 		<main class={containerClasses[containerWidth]}>
 			<slot />
