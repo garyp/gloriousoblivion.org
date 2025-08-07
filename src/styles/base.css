@@ -37,6 +37,40 @@
 	--box-shadow:
 		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
+	
+	/* Enhanced typography and visual rhythm */
+	--text-xs: 0.75rem;
+	--text-sm: 0.875rem;
+	--text-base: 1rem;
+	--text-lg: 1.125rem;
+	--text-xl: 1.25rem;
+	--text-2xl: 1.5rem;
+	--text-3xl: 1.875rem;
+	--text-4xl: 2.25rem;
+	--text-5xl: 3rem;
+	
+	/* Line height scale for better readability */
+	--leading-tight: 1.25;
+	--leading-snug: 1.375;
+	--leading-normal: 1.5;
+	--leading-relaxed: 1.625;
+	--leading-loose: 2;
+	
+	/* Consistent spacing scale */
+	--space-xs: 0.5rem;
+	--space-sm: 0.75rem;
+	--space-md: 1rem;
+	--space-lg: 1.5rem;
+	--space-xl: 2rem;
+	--space-2xl: 3rem;
+	--space-3xl: 4rem;
+	
+	/* Enhanced color palette */
+	--text-primary: oklch(15% .01 264.665);
+	--text-secondary: oklch(45% .02 258.338);
+	--text-muted: oklch(65% .015 259.733);
+	--border-subtle: oklch(90% .005 264.542);
+	--surface-elevated: oklch(98% .002 264.542);
 }
 
 .dark {
@@ -50,6 +84,13 @@
 	--box-shadow:
 		0 2px 6px rgba(0, 0, 0, 25%), 0 8px 24px rgba(0, 0, 0, 33%),
 		0 16px 32px rgba(0, 0, 0, 33%);
+	
+	/* Enhanced dark mode color palette */
+	--text-primary: oklch(95% .005 264.542);
+	--text-secondary: oklch(75% .015 258.338);
+	--text-muted: oklch(55% .02 259.733);
+	--border-subtle: oklch(25% .02 256.848);
+	--surface-elevated: oklch(18% .015 264.665);
 }
 
 @font-face {
@@ -68,6 +109,29 @@
 	font-display: swap;
 }
 
+
+/* Enhanced base typography */
+body {
+	line-height: var(--leading-relaxed);
+	letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	letter-spacing: -0.025em;
+	line-height: var(--leading-tight);
+}
+
+/* Subtle transitions for interactive elements */
+a, button {
+	transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+}
+
+/* Enhanced focus indicators */
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 2px;
+	border-radius: 3px;
+}
 
 /* Screen reader only class */
 .sr-only {
