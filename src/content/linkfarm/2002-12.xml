@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="month2html.xsl"?>
+
+<linkfarm>
+
+<link url="http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2002/12/22/MN242772.DTL"
+      time="2002-12-24T22:40-08:00"
+      title="High-tech billboards tune in to drivers&apos; tastes">
+  <source url="http://www.sfgate.com/" title="San Francisco Chronicle">
+    <via url="http://research.yale.edu/lawmeme/modules.php?name=News&amp;file=article&amp;sid=753"
+         title="LawMeme"/>
+  </source>
+  <archive date="2002-12-24"
+           rurl="www.sfgate.com/cgi-bin/article.cgi_f=_c_a_2002_12_22_MN242772.DTL.html"/>
+  <description>
+    In an advertising ploy right out of Steven Spielberg's "Minority Report,"
+    electronic billboards in the Bay Area and Sacramento are being equipped to
+    profile commuters as they whiz by -- and then instantly personalize freeway
+    ads based on the wealth and habits of those drivers.
+  </description>
+  <comment>
+    This is pretty damn cool. I'm usually very concerned about privacy, but
+    this seems fine to me since they're only using aggregate info for their
+    profiling.
+  </comment>
+</link>
+
+<link url="http://www.salon.com/politics/conason/2002/11/20/conservatives/index.html"
+      time="2002-12-19T01:18-08:00"
+      title="Where &quot;treason&quot; gets a free pass">
+  <source url="http://www.salon.com/" title="Salon.com"/>
+  <archive date="2002-12-18"
+           rurl="www.salon.com/politics/conason/2002/11/20/conservatives/index.html"/>
+  <description>
+    Why conservatives get a free pass for "treason" -- but liberals don't.
+  </description>
+  <comment>
+    An entry from "Joe Conason's Journal" over on Salon. Why do anti-war
+    liberals get labeled as "unpatriotic" by the conservative establishment,
+    while anti-war conservatives are quietly, but respectfully, ignored?
+  </comment>
+</link>
+
+<link url="http://www.dailycal.org/article.asp?id=10184"
+      time="2002-12-19T01:02-08:00"
+      title="Life After the University">
+  <source url="http://www.dailycal.org/" title="The Daily Californian"/>
+  <archive date="2002-12-18"
+           rurl="www.dailycal.org/article.asp_id=10184.html"/>
+  <description>
+    Opinion column on the shortcomings of the modern university as a result
+    of the individualistic American culture.
+  </description>
+  <comment>
+    Wow! A well-written, thought-provoking column appearing in the Daily Cal??
+    This paper might have a future yet. Great use of the limited space
+    available too.
+  </comment>
+</link>
+
+<link url="http://www.sfgate.com/cgi-bin/article.cgi?f=/c/a/2002/10/06/PK241831.DTL"
+      time="2002-12-19T00:47-08:00"
+      title="More than Petty gripe">
+  <source url="http://www.sfgate.com/" title="San Francisco Chronicle"/>
+  <archive date="2002-12-18"
+           rurl="www.sfgate.com/cgi-bin/article.cgi_f=_c_a_2002_10_06_PK241831.DTL.html"/>
+  <description>
+    Tom Petty is mad as hell and he is not going to take it anymore. He calls
+    his new album, "The Last DJ," a "loose concept album" where Petty blasts
+    corporate greed in the Clear Channel era of the music business.
+  </description>
+  <comment>
+    Tom Petty is my new hero. He's a major musician who not only talks about
+    his distaste for the current music business, but actually acts on it. Now
+    if only I liked his music enough to buy the new CD being reviewed in the
+    article...
+  </comment>
+</link>
+
+<link url="http://www.calendarlive.com/tv/cl-et-baker29nov29.story"
+      time="2002-12-19T00:31-08:00"
+      title="A 7 1/2-hour game of trivial pursuit">
+  <source url="http://www.latimes.com/" title="Los Angeles Times"/>
+  <archive date="2002-12-18"
+           rurl="www.calendarlive.com/tv/cl-et-baker29nov29.story.html"/>
+  <description>
+    We've heard it for decades: We're drowning in local television news shows
+    that are obsessed with crime and celebrity, the visual and the visceral.
+    When a Washington-based news-media think tank released its annual "grades"
+    of local TV news in 17 cities earlier this month, it gave each of Southern
+    California's three network affiliates low Cs for their 11&#160;p.m.
+    newscasts. The Project for Excellence in Journalism criticized the
+    stations for relying too heavily on crime stories, failing to do
+    sufficient numbers of "enterprise" stories that went beyond daily events
+    and lacking a commitment to their communities.
+  </description>
+  <comment>
+    The author spends 7 1/2 hours watching local network news and
+    cataloging its circus-like mentality.
+  </comment>
+</link>
+
+<link url="http://www.nytimes.com/2002/12/12/politics/12LIBR.html"
+      time="2002-12-18T22:29-08:00"
+      title="Librarians Receive Advice on Law and Reader Privacy">
+  <source url="http://www.nytimes.com/" title="The New York Times"/>
+  <archive date="2002-12-18"
+           rurl="www.nytimes.com/2002/12/12/politics/12LIBR.html"/>
+  <description>
+    Concerned about how federal access to their records would undermine
+    readers' privacy, thousands of librarians gathered around the country
+    to hear televised advice about how to respond to government requests
+    under last year's antiterrorism law.
+  </description>
+  <comment>
+    Librarians are the coolest people ever. Their approach is very low-key,
+    but they'd probably give up their rights over their dead bodies :) Here's
+    a quote: <blockquote>...the fewer records that were kept, the less
+    information the government could see. Even necessary records should be
+    promptly destroyed after use, they said.</blockquote>
+  </comment>
+</link>
+
+<link url="http://www.theonion.com/onion3845/report_presidents_lied.html"
+      time="2002-12-17T22:10-08:00"
+      title="Report: Presidents Washington Through Bush May Have Lied About Key Matters">
+  <source url="http://www.theonion.com/" title="The Onion"/>
+  <archive date="2002-12-17"
+           rurl="www.theonion.com/onion3845/report_presidents_lied.html"/>
+  <description>
+    In allegations likely to further erode Americans' faith in the office of
+    the presidency, presidents George Washington through George W. Bush may
+    have lied about key matters of national import during their tenures as
+    chief executive, an independent-counsel investigation asserted Monday.
+  </description>
+  <comment>
+    The best satire is when it's all based on the truth.
+  </comment>
+</link>
+
+<link url="http://www.santafe.edu/~shalizi/Sterling/Free_as_the_Air_Free_as_Water_Free_as_Knowledge.html"
+      time="2002-12-17T20:20-08:00"
+      title="Free As Air, Free As Water, Free As Knowledge">
+  <archive date="2002-12-17"
+           rurl="www.santafe.edu/~shalizi/Sterling/Free_as_the_Air_Free_as_Water_Free_as_Knowledge.html"/>
+  <description>
+    Bruce Sterling's speech to the Library Information Technology Association
+    on June 1992: The impact of commodification on libraries; the fallacy of
+    the information economy being about information.
+  </description>
+  <comment>
+    GO READ THIS NOW! The author starts to ramble after the first half, but
+    there's some great ideas in there.
+  </comment>
+</link>
+
+<link url="http://www.nytimes.com/2002/12/10/health/psychology/10RACE.html"
+      time="2002-12-17T18:20-08:00"
+      title="With Video Games, Researchers Link Guns to Stereotypes">
+  <source url="http://www.nytimes.com/" title="The New York Times"/>
+  <archive date="2002-12-17"
+           rurl="www.nytimes.com/2002/12/10/health/psychology/10RACE.html"/>
+  <description>
+    Findings suggest unconscious biases, possibly instilled by the media, can
+    shape behavior even when people do not consciously endorse such biases.
+  </description>
+</link>
+
+<link url="http://www.wired.com/news/politics/0,1283,56701,00.html"
+      time="2002-12-04T13:31-08:00"
+      title="Feds&apos; Spying Plan Fades to Black">
+  <source url="http://www.wired.com/" title="Wired News"/>
+  <archive date="2002-12-04"
+           rurl="www.wired.com/news/politics/0,1283,56701,00.html"/>
+  <description>
+    A controversial government initiative to recruit Americans to spy on each
+    other in an attempt to prevent terrorist attacks was quietly killed with
+    the passage of the Homeland Security Act.
+  </description>
+  <comment>
+    Good riddance for the TIPS program. Talk about a horrible idea!
+  </comment>
+</link>
+
+<link url="http://www.nytimes.com/2002/12/01/magazine/01IKEA.html"
+      time="2002-12-03"
+      title="How the Disposable Sofa Conquered America">
+  <source url="http://www.nytimes.com/" title="The New York Times"/>
+  <archive date="2002-12-03"
+           rurl="www.nytimes.com/2002/12/01/magazine/01IKEA.html"/>
+  <description>
+    Ikea had a hard time making it in the United States until downwardly
+    mobile, upwardly aspiring Americans realized the store could provide them
+    a cheap way to live well.
+  </description>
+  <comment>
+    An analysis of IKEA's success in America. Especially as a result of
+    the drastic changes in middle-class taste, which occured in the 1990's.
+    This article seems to parallel many of the ideas in "Bobos in Paradise"
+    pretty well, like the discussion of the design tastes of the new
+    middle class.
+  </comment>
+</link>
+
+</linkfarm>

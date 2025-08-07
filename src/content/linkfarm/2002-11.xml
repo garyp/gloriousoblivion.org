@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="month2html.xsl"?>
+
+<linkfarm>
+
+<link url="http://www.nytimes.com/2002/11/28/technology/circuits/28goog.html"
+      time="2002-11-28"
+      title="Postcards From Planet Google">
+  <source url="http://www.nytimes.com/" title="The New York Times"/>
+  <archive date="2002-11-28"
+           rurl="www.nytimes.com/2002/11/28/technology/circuits/28goog.html"/>
+  <description>
+    The Google search engine has become a global phenomenon, with 50 million
+    queries a day from over 100 countries.
+  </description>
+  <comment>
+    The possibilities of using Google's query database are just amazing. They
+    really do have the pulse of the world under their finger.
+  </comment>
+</link>
+
+<link url="http://www.reuters.com/newsArticle.jhtml?type=oddlyEnoughNews&amp;storyID=1737810"
+      time="2002-11-27"
+      title="Sex Urged for More Productivity">
+  <source url="http://www.reuters.com/" title="Reuters"/>
+  <archive date="2002-11-27"
+           rurl="www.reuters.com/newsArticle.jhtml_type=oddlyEnoughNews_storyID=1737810.html"/>
+  <description>
+    An international conference on sex in Singapore claims that healthy sex
+    lives make happy workers, who will in turn create a more robust economy.
+  </description>
+  <comment>
+    No comment needed... Obviously I like their reasoning :)
+  </comment>
+</link>
+
+<link url="http://www.salon.com/news/feature/2002/11/15/no_fly/index.html"
+      time="2002-11-27"
+      title="Grounded">
+  <source url="http://www.salon.com/" title="Salon.com"/>
+  <archive date="2002-11-27"
+           rurl="www.salon.com/news/feature/2002/11/15/no_fly/index.html"/>
+  <description>
+    A federal agency confirms that it maintains an air-travel blacklist of
+    1,000 people. Peace activists and civil libertarians fear they're on
+    it.
+  </description>
+  <comment>
+   The article is a bit speculative in parts, but still a very eye-opening read.
+  </comment>
+</link>
+
+<link url="http://www.wired.com/news/business/0,1367,56370,00.html"
+      time="2002-11-27"
+      title="A Vote for Less Tech at the Polls">
+  <source url="http://www.wired.com/" title="Wired News"/>
+  <archive date="2002-11-27"
+           rurl="www.wired.com/news/business/0,1367,56370,00.html"/>
+  <description>
+    Criticism of computerized touch-screen voting machines.
+  </description>
+</link>
+
+<link url="http://www.dailycal.org/article.asp?id=10361"
+      time="2002-11-27"
+      title="Mailed Ballots Missing in Runoff Election Snafu">
+  <source url="http://www.dailycal.org/" title="The Daily Californian"/>
+  <archive date="2002-11-27"
+           rurl="www.dailycal.org/article.asp_id=10361.html"/>
+  <description>
+    Ballots in a vote-by-mail runoff election remain undelivered to some city
+    residents. Berkeley's use of bulk, rather than first-class, mail is
+    blamed.
+  </description>
+</link>
+
+<link url="http://news.bbc.co.uk/1/hi/england/2504081.stm"
+      time="2002-11-27"
+      title="Man cleared of removing girl&apos;s teeth">
+  <source url="http://news.bbc.co.uk/" title="BBC News"/>
+  <archive date="2002-11-27"
+           rurl="news.bbc.co.uk/1/hi/england/2504081.stm.html"/>
+  <description>
+    A man has been found not guilty of removing 18 of his girlfriend's
+    teeth while they were both high on the hallucinatory drug GHB.
+  </description>
+  <comment>
+    Must have been quite a trip to see a giant fly trying to choke you to
+    death :) "The couple, who are still together, have since stopped
+    taking GHB."
+  </comment>
+</link>
+
+<link url="http://www.salon.com/politics/conason/2002/11/14/bush/index.html"
+      time="2002-11-21"
+      title="He&apos;s ba-a-ck!">
+  <source url="http://www.salon.com/" title="Salon.com"/>
+  <archive date="2002-11-21"
+           rurl="www.salon.com/politics/conason/2002/11/14/bush/index.html"/>
+  <description>
+    America's public enemy No. 1 has suddenly reappeared -- and the White
+    House doesn't care.
+  </description>
+</link>
+
+<link url="http://www.accessatlanta.com/ajc/living/1102/14wyman.html"
+      time="2002-11-14"
+      title="Will the real Bill Wyman please tune up?">
+  <source url="http://www.accessatlanta.com/ajc/"
+          title="The Atlanta Journal-Constitution"/>
+  <archive date="2002-11-14"
+           rurl="www.accessatlanta.com/ajc/living/1102/14wyman.html"/>
+  <description>
+    Journalist Bill Wyman receives a "cease-and-desist" letter asking
+    him to stop using his own name because it is "owned" by famed
+    Rolling Stones bassist Bill Wyman.
+  </description>
+  <comment>
+    I swear, lawyers just have nothing better to do sometimes. Sending
+    a cease-and-desist over the use of your own name in your own article??
+  </comment>
+</link>
+
+<link url="http://www-106.ibm.com/developerworks/xml/library/x-syntax.html"
+      time="2002-11-06"
+      title="Exploring alternative syntaxes for XML">
+  <source url="http://www.ibm.com/developerworks/"
+          title="IBM developerWorks"/>
+  <archive date="2002-11-06"
+           rurl="www-106.ibm.com/developerworks/xml/library/x-syntax.html"/>
+  <description>
+    XML's syntax has brought many benefits due to its interoperability,
+    yet it can be tiresome to author XML documents. Edd Dumbill examines a
+    range of alternative syntaxes for XML, and discusses their benefits and
+    drawbacks.
+  </description>
+</link>
+
+<link url="http://www.reuters.com/news_article.jhtml?type=healthnews&amp;StoryID=1684171"
+      time="2002-11-06"
+      title="Too Much Screen Time Can Make Computer Users Sick">
+  <source url="http://www.reuters.com/" title="Reuters"/>
+  <archive date="2002-11-06"
+           rurl="www.reuters.com/news_article.jhtml_type=healthnews_StoryID=1684171.html"/>
+  <description>
+    The more time an office worker toils in front of a computer, the more
+    likely he or she is to suffer a host of physical, mental and sleep-related
+    ills, Japanese researchers report.
+  </description>
+  <comment>
+    I always knew that using the computer so much wasn't good for me.
+  </comment>
+</link>
+
+</linkfarm>

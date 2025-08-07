@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="month2html.xsl"?>
+
+<linkfarm>
+
+<link url="http://www.coe.berkeley.edu/labnotes/0103/kammen.html"
+      time="2003-02-06T10:30-08:00"
+      title="The Power of Distributed Power">
+  <source url="http://www.coe.berkeley.edu/labnotes/" title="Lab Notes"/>
+  <archive date="2003-02-06"
+           rurl="www.coe.berkeley.edu/labnotes/0103/kammen.html"/>
+  <description>
+  </description>
+  <comment>
+  </comment>
+</link>
+
+</linkfarm>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xml" href="month2html.xsl"?>
+
+<linkfarm>
+
+<link url="http://prdownloads.sourceforge.net/owasp/OWASPWebApplicationSecurityTopTen-Version1.pdf"
+      time="2003-01-13T15:37-08:00"
+      title="The Ten Most Critical Web Application Security Vulnerabilities">
+  <source url="http://www.owasp.org/" title="The Open Web Application Security Project"/>
+  <archive date="2003-01-13"
+           rurl="prdownloads.sourceforge.net/owasp/OWASPWebApplicationSecurityTopTen-Version1.pdf"/>
+  <description>
+    A new report detailing the ten most critical web application security
+    problems. The security issues raised here are not new. In fact, some have
+    been well understood for decades. Yet for some reason, major software
+    development projects are still making these mistakes and jeopardizing not
+    only their customers' security, but also the security of the entire
+    Internet.
+  </description>
+  <comment>
+    If you do any web development that goes beyond static HTML, you better be
+    familiar with every issue raised in this report. Otherwise, you're just
+    asking for your web server to be hacked into.
+  </comment>
+</link>
+
+<link url="http://www.redherring.com/insider/2003/01/copycats011003.html"
+      time="2003-01-12T04:33-08:00"
+      title="What lawyers can learn from comic books">
+  <source url="http://www.redherring.com/" title="Red Herring">
+    <via url="http://grep.law.harvard.edu/article.pl?sid=03/01/10/2153219"
+         title="GrepLaw"/>
+  </source>
+  <archive date="2003-01-12"
+           rurl="www.redherring.com/insider/2003/01/copycats011003.html"/>
+  <description>
+    Forty percent of publications produced in Japan are comics, which provide
+    30 percent of Japanese publishing revenue. But the comics, or manga,
+    market in Japan is divided into two types: one is purely original work;
+    the other is "amateur" or copycat comics, which develop the work of
+    original artists in different and unauthorized ways. This second kind of
+    comic, called dojinshi , is a huge and growing market in Japan.<br />
+    Put most simply, however, dojinshi is illegal. So what is it that accounts
+    for this massive "theft" of the creative work of original manga artists?
+    Why is this "invasion" of the "rights of creators" allowed?
+  </description>
+  <comment>
+    Concise and to the point. As much as certain activities might be illegal,
+    such as copyright infringement, companies should consider the business
+    consequences of actually pursuing a lawsuit against the transgressors.
+    This is especially true when the "illegal" activities are actually
+    improving the company's bottom line by increasing consumer interest and/or
+    satisfaction.<br />
+    I can't believe that someone actually has to write about this! Is our
+    country so ready to sue that they don't even consider the practicality of
+    what they're doing? Another reason why jury nullification makes sense:
+    did you just break the letter of the law, or did you actually cause harm
+    to some person/corporation?
+  </comment>
+</link>
+
+<link url="http://www.aclu.org/cartoons/artshow.html"
+      time="2003-01-12T04:23-08:00"
+      title="USA PATRIOT Art Show">
+  <source url="http://www.aclu.org/" title="American Civil Liberties Union">
+    <via url="http://boingboing.net/2003_01_01_archive.html#90169036"
+         title="Boing Boing"/>
+  </source>
+  <description>
+    In the aftermath of September 11, freedom of speech has been under attack.
+    Political cartoonists are not immune. In some cities cartoonists have
+    been fired or lost freelance jobs because of cartoons critical of U.S.
+    policy or for using "wrong" metaphors.<br />
+    In response, cartoonists Gary Huck, Mike Konopacki, Matt Wuerker and
+    writer Alec Dubro put together a show of cartoons from 41 editorial
+    cartoonists from the U.S. and Mexico.
+  </description>
+  <comment>
+    Great "virtual" exhibition of political cartoons. I just wish they'd
+    included even more of them.
+  </comment>
+</link>
+
+<link url="http://www.openp2p.com/pub/a/p2p/2002/12/11/piracy.html"
+      time="2003-01-10T01:33-08:00"
+      title="Piracy is Progressive Taxation, and Other Thoughts on the Evolution of Online Distribution">
+  <source url="http://www.openp2p.com/" title="OpenP2P.com"/>
+  <archive date="2003-01-10"
+           rurl="www.openp2p.com/pub/a/p2p/2002/12/11/piracy.html"/>
+  <description>
+    As he follows the business world of movies and music, Tim O'Reilly draws
+    upon his own publishing experience and comments on the current
+    controversy over digital file sharing.
+  </description>
+  <comment>
+    Tim O'Reilly doesn't really make a strong point about anything in
+    particular, but a good rehashing/summary of the best arguments from
+    the pro-file-sharing camp. Basically, an author would rather have
+    his work pirated widely than live in obscurity; consumers will pay for
+    fairly priced, added value services rather than download free, but
+    unreliable, content (probably true for the majority population, but I
+    doubt the anti-intellectual-property extremists would compromise on this
+    point); and piracy won't starve the artist, since there's always demand
+    for their work--just the publishers who can't adapt to new distribution
+    models.
+  </comment>
+</link>
+
+</linkfarm>
