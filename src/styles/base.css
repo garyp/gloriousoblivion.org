@@ -3,81 +3,56 @@
 
 @variant dark (.dark &);
 
-/* Override prose colors for sloth theme */
-.prose {
-  --tw-prose-body: var(--text-primary);
-  --tw-prose-headings: var(--text-primary);
-  --tw-prose-lead: var(--text-secondary);
-  --tw-prose-links: var(--primary);
-  --tw-prose-bold: var(--text-primary);
-  --tw-prose-counters: var(--text-muted);
-  --tw-prose-bullets: var(--accent-warm);
-  --tw-prose-hr: var(--border-subtle);
-  --tw-prose-quotes: var(--text-muted);
-  --tw-prose-quote-borders: var(--accent-warm);
-  --tw-prose-captions: var(--text-muted);
-  --tw-prose-code: var(--accent-wood);
-  --tw-prose-pre-code: var(--text-primary);
-  --tw-prose-pre-bg: var(--bg-secondary);
-  --tw-prose-th-borders: var(--border-subtle);
-  --tw-prose-td-borders: var(--border-subtle);
-}
-
-.dark .prose {
-  --tw-prose-body: var(--text-primary);
-  --tw-prose-headings: var(--text-primary);
-  --tw-prose-lead: var(--text-secondary);
-  --tw-prose-links: var(--primary-light);
-  --tw-prose-bold: var(--text-primary);
-  --tw-prose-counters: var(--text-muted);
-  --tw-prose-bullets: var(--accent-warm);
-  --tw-prose-hr: var(--border-subtle);
-  --tw-prose-quotes: var(--text-muted);
-  --tw-prose-quote-borders: var(--accent-warm);
-  --tw-prose-captions: var(--text-muted);
-  --tw-prose-code: var(--accent-wood);
-  --tw-prose-pre-code: var(--text-primary);
-  --tw-prose-pre-bg: var(--bg-secondary);
-  --tw-prose-th-borders: var(--border-subtle);
-  --tw-prose-td-borders: var(--border-subtle);
-}
-
+/* =========================================================================
+   Glorious Oblivion — Visual Identity
+   "Twilight Library": parchment & ink in light, midnight & moonlight in dark,
+   with a signature ember accent and refined serif typography.
+   ========================================================================= */
 
 :root {
-	/* Sloth-inspired color palette - Light Theme */
-	--primary: #228B22;
-	--primary-light: #32CD32;
-	--primary-dark: #006400;
-	--accent: #228B22;
-	--accent-dark: #006400;
-	--accent-light: #32CD32;
-	
-	/* Background Colors */
-	--bg-primary: #FAEBD7;
-	--bg-secondary: #F5DEB3;
-	--bg-accent: #FFF8DC;
-	
-	/* Text Colors */
-	--text-primary: #2F4F2F;
-	--text-secondary: #556B2F;
-	--text-muted: #8B4513;
-	
-	/* Accent Colors */
-	--accent-warm: #CD853F;
-	--accent-wood: #D2691E;
-	--accent-leaf: #ADFF2F;
-	
-	/* Legacy support for existing components */
-	--black: 47, 79, 79; /* Dark Slate Gray RGB */
-	--gray: 139, 69, 19; /* Saddle Brown RGB */
-	--gray-light: 245, 222, 179; /* Wheat RGB */
-	--gray-dark: 47, 79, 79; /* Dark Slate Gray RGB */
-	--gray-gradient: rgba(245, 222, 179, 50%), var(--bg-primary);
-	--box-shadow:
-		0 2px 6px rgba(139, 69, 19, 25%), 0 8px 24px rgba(139, 69, 19, 33%),
-		0 16px 32px rgba(139, 69, 19, 33%);
-	
-	/* Enhanced typography and visual rhythm */
+	/* -- Palette: Light (Parchment & Ink) -- */
+	--ink: #1F1B16;
+	--ink-soft: #4A3F35;
+	--ink-faded: #8A7A6B;
+
+	--parchment: #F4EFE6;
+	--parchment-deep: #EAE2D2;
+	--parchment-pale: #FBF7EE;
+
+	--ember: #B0563C;
+	--ember-deep: #8C3F2A;
+	--gilt: #B58A3A;
+
+	--rule: #D9CDB6;
+	--rule-soft: #E6DCC7;
+
+	/* -- Semantic tokens (consumed by components) -- */
+	--bg-primary: var(--parchment);
+	--bg-secondary: var(--parchment-deep);
+	--bg-accent: var(--parchment-pale);
+
+	--text-primary: var(--ink);
+	--text-secondary: var(--ink-soft);
+	--text-muted: var(--ink-faded);
+
+	--primary: var(--ember);
+	--primary-light: var(--ember);
+	--primary-dark: var(--ember-deep);
+	--accent: var(--ember);
+	--accent-dark: var(--ember-deep);
+	--accent-light: var(--gilt);
+	--accent-warm: var(--gilt);
+	--accent-wood: var(--ember-deep);
+	--accent-leaf: var(--gilt);
+
+	--border-subtle: var(--rule);
+	--surface-elevated: var(--parchment-pale);
+
+	/* -- Typography -- */
+	--font-body: 'Atkinson', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+	--font-display: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', P052, 'Baskerville', 'Times New Roman', serif;
+
+	/* Type scale */
 	--text-xs: 0.75rem;
 	--text-sm: 0.875rem;
 	--text-base: 1rem;
@@ -87,15 +62,13 @@
 	--text-3xl: 1.875rem;
 	--text-4xl: 2.25rem;
 	--text-5xl: 3rem;
-	
-	/* Line height scale for better readability */
-	--leading-tight: 1.25;
-	--leading-snug: 1.375;
+
+	--leading-tight: 1.2;
+	--leading-snug: 1.35;
 	--leading-normal: 1.5;
-	--leading-relaxed: 1.625;
+	--leading-relaxed: 1.7;
 	--leading-loose: 2;
-	
-	/* Consistent spacing scale */
+
 	--space-xs: 0.5rem;
 	--space-sm: 0.75rem;
 	--space-md: 1rem;
@@ -103,51 +76,69 @@
 	--space-xl: 2rem;
 	--space-2xl: 3rem;
 	--space-3xl: 4rem;
-	
-	/* Enhanced color palette using new theme colors */
-	--border-subtle: var(--bg-secondary);
-	--surface-elevated: var(--bg-accent);
+
+	/* -- Legacy compat tokens (kept for any unmigrated components) -- */
+	--black: 31, 27, 22;
+	--gray: 138, 122, 107;
+	--gray-light: 234, 226, 210;
+	--gray-dark: 31, 27, 22;
+	--gray-gradient: var(--parchment-deep), var(--parchment);
+	--box-shadow:
+		0 1px 2px rgba(31, 27, 22, 0.05),
+		0 6px 16px rgba(31, 27, 22, 0.08),
+		0 18px 36px rgba(31, 27, 22, 0.06);
 }
 
 .dark {
-	/* Sloth-inspired color palette - Dark Theme */
-	--primary: #32CD32;
-	--primary-light: #ADFF2F;
-	--primary-dark: #228B22;
-	--accent: #32CD32;
-	--accent-dark: #228B22;
-	--accent-light: #ADFF2F;
-	
-	/* Background Colors */
-	--bg-primary: #1C1C1C;
-	--bg-secondary: #2D2D2D;
-	--bg-accent: #3A3A3A;
-	
-	/* Text Colors */
-	--text-primary: #F5DEB3;
-	--text-secondary: #DEB887;
-	--text-muted: #A0522D;
-	
-	/* Accent Colors */
-	--accent-warm: #CD853F;
-	--accent-wood: #D2691E;
-	--accent-leaf: #90EE90;
-	
-	/* Legacy support for existing components */
-	--black: 245, 222, 179; /* Beige RGB for text */
-	--gray: 160, 82, 45; /* Sienna RGB */
-	--gray-light: 58, 58, 58; /* Dark Gray RGB */
-	--gray-dark: 222, 184, 135; /* Burlywood RGB */
-	--gray-gradient: rgba(58, 58, 58, 50%), var(--bg-primary);
+	/* -- Palette: Dark (Midnight & Moonlight) -- */
+	--ink: #E8DFD0;
+	--ink-soft: #B5A998;
+	--ink-faded: #7A6F60;
+
+	--parchment: #0F1419;
+	--parchment-deep: #161C24;
+	--parchment-pale: #1F2731;
+
+	--ember: #E07A57;
+	--ember-deep: #C9603F;
+	--gilt: #DDB970;
+
+	--rule: #2A323D;
+	--rule-soft: #232B36;
+
+	--bg-primary: var(--parchment);
+	--bg-secondary: var(--parchment-deep);
+	--bg-accent: var(--parchment-pale);
+
+	--text-primary: var(--ink);
+	--text-secondary: var(--ink-soft);
+	--text-muted: var(--ink-faded);
+
+	--primary: var(--ember);
+	--primary-light: var(--gilt);
+	--primary-dark: var(--ember-deep);
+	--accent: var(--ember);
+	--accent-dark: var(--ember-deep);
+	--accent-light: var(--gilt);
+	--accent-warm: var(--gilt);
+	--accent-wood: var(--ember-deep);
+	--accent-leaf: var(--gilt);
+
+	--border-subtle: var(--rule);
+	--surface-elevated: var(--parchment-pale);
+
+	--black: 232, 223, 208;
+	--gray: 181, 169, 152;
+	--gray-light: 22, 28, 36;
+	--gray-dark: 232, 223, 208;
+	--gray-gradient: var(--parchment-deep), var(--parchment);
 	--box-shadow:
-		0 2px 6px rgba(0, 0, 0, 40%), 0 8px 24px rgba(0, 0, 0, 50%),
-		0 16px 32px rgba(0, 0, 0, 60%);
-	
-	/* Enhanced dark mode color palette using new theme colors */
-	--border-subtle: var(--bg-secondary);
-	--surface-elevated: var(--bg-accent);
+		0 1px 2px rgba(0, 0, 0, 0.4),
+		0 6px 18px rgba(0, 0, 0, 0.55),
+		0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
+/* -- Fonts -- */
 @font-face {
 	font-family: 'Atkinson';
 	src: url('/fonts/atkinson-regular.woff') format('woff');
@@ -164,33 +155,191 @@
 	font-display: swap;
 }
 
+/* -- Base typography -- */
+html {
+	font-family: var(--font-body);
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+}
 
-/* Enhanced base typography */
 body {
+	font-family: var(--font-body);
 	line-height: var(--leading-relaxed);
-	letter-spacing: -0.01em;
+	letter-spacing: -0.005em;
+	background-color: var(--bg-primary);
+	color: var(--text-primary);
+	font-feature-settings: "kern", "liga", "onum";
 }
 
 h1, h2, h3, h4, h5, h6 {
-	letter-spacing: -0.025em;
+	font-family: var(--font-display);
+	letter-spacing: -0.015em;
 	line-height: var(--leading-tight);
+	font-weight: 600;
+	color: var(--text-primary);
 }
 
-/* Subtle transitions for interactive elements */
+h1 em, h2 em, h3 em { font-style: italic; }
+
+a {
+	color: var(--primary);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 0.18em;
+}
+
+a:hover { color: var(--primary-dark); }
+.dark a:hover { color: var(--gilt); }
+
 a, button {
-	transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out;
+	transition: color 0.18s ease, opacity 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
 }
 
-/* Enhanced focus indicators */
 :focus-visible {
-	outline: 2px solid var(--accent);
-	outline-offset: 2px;
-	border-radius: 3px;
+	outline: 2px solid var(--ember);
+	outline-offset: 3px;
+	border-radius: 2px;
 }
 
-/* Screen reader only class */
+::selection {
+	background-color: color-mix(in srgb, var(--ember) 35%, transparent);
+	color: var(--text-primary);
+}
+
+hr {
+	border: 0;
+	height: 1px;
+	background-color: var(--border-subtle);
+}
+
 .sr-only {
 	@apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap;
 	clip: rect(0, 0, 0, 0);
 	border: 0;
+}
+
+/* =========================================================================
+   Identity components
+   ========================================================================= */
+
+/* Wordmark — used in the site header */
+.wordmark {
+	font-family: var(--font-display);
+	font-weight: 500;
+	letter-spacing: 0.01em;
+	line-height: 1;
+	color: var(--text-primary);
+}
+.wordmark .wordmark-glorious {
+	font-style: italic;
+}
+.wordmark .wordmark-oblivion {
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	font-size: 0.78em;
+	margin-left: 0.35em;
+	color: var(--ember);
+}
+
+/* Ornament — section divider used between articles and major sections */
+.ornament {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	color: var(--ember);
+	font-family: var(--font-display);
+}
+.ornament::before,
+.ornament::after {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background: linear-gradient(
+		to right,
+		transparent,
+		var(--border-subtle) 30%,
+		var(--border-subtle) 70%,
+		transparent
+	);
+}
+.ornament-mark {
+	font-size: 0.9rem;
+	letter-spacing: 0.5em;
+	padding-left: 0.5em;
+	user-select: none;
+}
+
+/* Hairline above a label, used for kicker text ("ESSAYS" etc.) */
+.kicker {
+	font-family: var(--font-display);
+	font-style: italic;
+	font-size: var(--text-sm);
+	letter-spacing: 0.05em;
+	color: var(--ember);
+}
+
+.eyebrow {
+	font-family: var(--font-body);
+	font-size: 0.7rem;
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+	color: var(--text-muted);
+}
+
+/* =========================================================================
+   Prose — blog post body
+   ========================================================================= */
+
+.prose {
+	--tw-prose-body: var(--text-primary);
+	--tw-prose-headings: var(--text-primary);
+	--tw-prose-lead: var(--text-secondary);
+	--tw-prose-links: var(--ember);
+	--tw-prose-bold: var(--text-primary);
+	--tw-prose-counters: var(--text-muted);
+	--tw-prose-bullets: var(--ember);
+	--tw-prose-hr: var(--border-subtle);
+	--tw-prose-quotes: var(--text-secondary);
+	--tw-prose-quote-borders: var(--ember);
+	--tw-prose-captions: var(--text-muted);
+	--tw-prose-code: var(--ember-deep);
+	--tw-prose-pre-code: var(--text-primary);
+	--tw-prose-pre-bg: var(--bg-secondary);
+	--tw-prose-th-borders: var(--border-subtle);
+	--tw-prose-td-borders: var(--border-subtle);
+}
+
+.dark .prose {
+	--tw-prose-links: var(--gilt);
+	--tw-prose-code: var(--gilt);
+	--tw-prose-quote-borders: var(--ember);
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4 {
+	font-family: var(--font-display);
+}
+
+.prose blockquote {
+	font-family: var(--font-display);
+	font-style: italic;
+	font-size: 1.15em;
+	border-left-width: 2px;
+}
+
+.prose hr {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+/* Drop cap on the first paragraph of a blog post */
+.prose-article > p:first-of-type::first-letter {
+	font-family: var(--font-display);
+	font-weight: 600;
+	float: left;
+	font-size: 3.6em;
+	line-height: 0.85;
+	padding-right: 0.12em;
+	padding-top: 0.08em;
+	margin-right: 0.04em;
+	color: var(--ember);
 }

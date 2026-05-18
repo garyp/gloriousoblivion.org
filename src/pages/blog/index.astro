@@ -3,52 +3,79 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
-import { Image } from 'astro:assets';
 
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
+
+// Group by year for the archive view
+const postsByYear = posts.reduce((acc, post) => {
+	const year = post.data.pubDate.getFullYear();
+	(acc[year] ||= []).push(post);
+	return acc;
+}, {} as Record<number, typeof posts>);
+
+const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
 ---
 
-<BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION} containerWidth="wide">
+<BaseLayout title={`Writing — ${SITE_TITLE}`} description={SITE_DESCRIPTION} containerWidth="wide">
+	<header class="pt-6 pb-10 text-center">
+		<p class="eyebrow mb-4">The archive</p>
+		<h1 class="text-4xl md:text-5xl mb-3" style="font-family: var(--font-display);">
+			Writing, in <em class="italic">reverse</em>.
+		</h1>
+		<p class="text-base md:text-lg max-w-xl mx-auto" style="color: var(--text-secondary); font-family: var(--font-display); font-style: italic;">
+			{posts.length} pieces, collected across the years.
+		</p>
+	</header>
+
+	<div class="ornament mb-12" aria-hidden="true">
+		<span class="ornament-mark">&#10086;</span>
+	</div>
+
 	<section>
-		<div class="space-y-8">
-			{
-				posts.map((post, index) => (
-					<article class="group border-b border-gray-100 dark:border-gray-800 pb-8 last:border-b-0 last:pb-0">
-						<a href={`/blog/${post.id}/`} class="block no-underline">
-							<div class="flex flex-col gap-4 transition-all duration-300 ease-out group-hover:translate-x-1">
-								{post.data.heroImage && (
-									<div class="overflow-hidden rounded-lg">
-										<Image 
-											width={720} 
-											height={360} 
-											src={post.data.heroImage} 
-											alt="" 
-											class="w-full h-48 object-cover transition-transform duration-300 ease-out group-hover:scale-105" 
-										/>
-									</div>
-								)}
-								<div class="space-y-2">
-									<h2 class="text-2xl font-bold text-gray-900 dark:text-gray-100 leading-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
-										{post.data.title}
-									</h2>
-									<div class="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
-										<time class="font-medium">
-											<FormattedDate date={post.data.pubDate} />
-										</time>
-									</div>
+		{years.map((year) => (
+			<div class="mb-14">
+				<h2
+					class="text-3xl md:text-4xl mb-6 pb-2 flex items-baseline gap-4"
+					style="font-family: var(--font-display); border-bottom: 1px solid var(--border-subtle);"
+				>
+					<span style="font-variant-numeric: oldstyle-nums; color: var(--ember);">{year}</span>
+					<span class="text-sm" style="color: var(--text-muted); font-family: var(--font-body); font-style: normal;">
+						&middot; {postsByYear[year].length} {postsByYear[year].length === 1 ? 'entry' : 'entries'}
+					</span>
+				</h2>
+				<ul>
+					{postsByYear[year].map((post) => (
+						<li class="py-3 border-b last:border-b-0" style="border-color: var(--rule-soft, var(--border-subtle));">
+							<a
+								href={`/blog/${post.id}/`}
+								class="group flex flex-col md:flex-row md:items-baseline md:gap-6 no-underline"
+							>
+								<time
+									class="shrink-0 text-sm md:w-28 mb-1 md:mb-0"
+									style="color: var(--text-muted); font-variant-numeric: oldstyle-nums; font-family: var(--font-display); font-style: italic;"
+								>
+									<FormattedDate date={post.data.pubDate} />
+								</time>
+								<div class="flex-1">
+									<h3 class="text-lg md:text-xl leading-snug mb-1" style="font-family: var(--font-display); color: var(--text-primary);">
+										<span
+											class="group-hover:underline"
+											style="text-decoration-color: var(--ember); text-underline-offset: 0.18em;"
+										>{post.data.title}</span>
+									</h3>
 									{post.data.description && (
-										<p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+										<p class="text-sm leading-relaxed" style="color: var(--text-secondary);">
 											{post.data.description}
 										</p>
 									)}
 								</div>
-							</div>
-						</a>
-					</article>
-				))
-			}
-		</div>
+							</a>
+						</li>
+					))}
+				</ul>
+			</div>
+		))}
 	</section>
 </BaseLayout>

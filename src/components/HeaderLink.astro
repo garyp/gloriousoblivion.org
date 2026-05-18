@@ -9,6 +9,33 @@ const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === '/' + (subpath?.[0] || '') + '/';
 ---
 
-<a href={href} class:list={[className, "inline-block no-underline py-4 px-3 transition-colors duration-200 font-medium", { "font-semibold": isActive }]} style={isActive ? `color: var(--primary);` : `color: var(--text-secondary);`} onmouseover={`this.style.color='var(--primary)'`} onmouseout={`this.style.color='${isActive ? 'var(--primary)' : 'var(--text-secondary)'}'`} {...props}>
+<a
+	href={href}
+	class:list={[
+		className,
+		'header-link inline-block no-underline py-2 px-3 text-sm tracking-wide',
+		{ 'is-active': isActive },
+	]}
+	style={`color: ${isActive ? 'var(--ember)' : 'var(--text-secondary)'};`}
+	onmouseover={`this.style.color='var(--ember)'`}
+	onmouseout={`this.style.color='${isActive ? 'var(--ember)' : 'var(--text-secondary)'}'`}
+	{...props}
+>
 	<slot />
 </a>
+
+<style>
+	.header-link {
+		font-family: var(--font-body);
+		position: relative;
+	}
+	.header-link.is-active::after {
+		content: '';
+		position: absolute;
+		left: 0.75rem;
+		right: 0.75rem;
+		bottom: 0.25rem;
+		height: 1px;
+		background-color: var(--ember);
+	}
+</style>

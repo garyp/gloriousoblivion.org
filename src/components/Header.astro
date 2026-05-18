@@ -2,16 +2,26 @@
 import HeaderLink from './HeaderLink.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import { SITE_TITLE } from '../consts';
+
+const [glorious, ...rest] = SITE_TITLE.split(' ');
+const oblivion = rest.join(' ');
 ---
 
-<header class="m-0 px-4 backdrop-blur-sm border-b text-xl sticky top-0 z-50" style="background-color: color-mix(in srgb, var(--bg-primary) 80%, transparent); border-color: var(--border-subtle);">
-	<nav class="flex items-center justify-between max-w-7xl mx-auto">
-		<h2 class="m-0 text-base">
-			<a href="/" class="no-underline py-4 px-2 border-b-4 border-transparent font-bold tracking-tight transition-colors duration-200" style="color: var(--text-primary);" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='var(--text-primary)'">{SITE_TITLE}</a>
-		</h2>
+<header
+	class="m-0 px-6 backdrop-blur-md sticky top-0 z-50 border-b"
+	style="background-color: color-mix(in srgb, var(--bg-primary) 85%, transparent); border-color: var(--border-subtle);"
+>
+	<nav class="flex items-center justify-between max-w-6xl mx-auto py-4">
+		<a
+			href="/"
+			class="wordmark text-xl md:text-2xl no-underline"
+			aria-label={SITE_TITLE}
+		>
+			<span class="wordmark-glorious">{glorious}</span><span class="wordmark-oblivion">{oblivion}</span>
+		</a>
 		<div class="flex items-center gap-1">
 			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog/">Blog</HeaderLink>
+			<HeaderLink href="/blog/">Writing</HeaderLink>
 			<HeaderLink href="/about/">About</HeaderLink>
 		</div>
 		<div class="social-links flex items-center gap-2 max-sm:hidden">
