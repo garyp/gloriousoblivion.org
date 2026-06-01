@@ -40,7 +40,7 @@ const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
 					class="text-3xl md:text-4xl mb-6 pb-2 flex items-baseline gap-4"
 					style="font-family: var(--font-display); border-bottom: 1px solid var(--border-subtle);"
 				>
-					<span style="font-variant-numeric: oldstyle-nums; color: var(--ember);">{year}</span>
+					<span style="font-variant-numeric: oldstyle-nums; color: var(--moss);">{year}</span>
 					<span class="text-sm" style="color: var(--text-muted); font-family: var(--font-body); font-style: normal;">
 						&middot; {postsByYear[year].length} {postsByYear[year].length === 1 ? 'entry' : 'entries'}
 					</span>
@@ -62,7 +62,7 @@ const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
 									<h3 class="text-lg md:text-xl leading-snug mb-1" style="font-family: var(--font-display); color: var(--text-primary);">
 										<span
 											class="group-hover:underline"
-											style="text-decoration-color: var(--ember); text-underline-offset: 0.18em;"
+											style="text-decoration-color: var(--moss); text-underline-offset: 0.18em;"
 										>{post.data.title}</span>
 									</h3>
 									{post.data.description && (
