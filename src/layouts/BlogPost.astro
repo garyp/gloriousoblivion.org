@@ -9,7 +9,7 @@ type Props = CollectionEntry<'blog'>['data'] & {
 	comments?: CollectionEntry<'comments'>['data'] | undefined;
 };
 
-const { title, description, pubDate, updatedDate, heroImage, comments } = Astro.props;
+const { title, description, subtitle, pubDate, updatedDate, heroImage, comments } = Astro.props;
 ---
 
 <BaseLayout title={title} description={description} containerWidth="full">
@@ -27,7 +27,7 @@ const { title, description, pubDate, updatedDate, heroImage, comments } = Astro.
 			</div>
 		)}
 
-		<div class="w-[720px] max-w-[calc(100%-2rem)] mx-auto px-4 pt-10 pb-6">
+		<div class="w-[780px] max-w-[calc(100%-2rem)] mx-auto px-4 pt-10 pb-6">
 			<header class="text-center mb-2">
 				<p class="eyebrow mb-4">
 					<FormattedDate date={pubDate} />
@@ -46,12 +46,12 @@ const { title, description, pubDate, updatedDate, heroImage, comments } = Astro.
 				>
 					{title}
 				</h1>
-				{description && (
+				{subtitle && (
 					<p
 						class="text-base md:text-lg max-w-xl mx-auto mb-6"
 						style="color: var(--text-secondary); font-family: var(--font-display); line-height: 1.5;"
 					>
-						{description}
+						{subtitle}
 					</p>
 				)}
 				<div class="ornament" aria-hidden="true">
@@ -60,7 +60,7 @@ const { title, description, pubDate, updatedDate, heroImage, comments } = Astro.
 			</header>
 		</div>
 
-		<div class="w-[720px] max-w-[calc(100%-2rem)] mx-auto px-4 pb-12">
+		<div class="w-[780px] max-w-[calc(100%-2rem)] mx-auto px-4 pb-12">
 			<div class="prose prose-lg prose-article max-w-none">
 				<slot />
 			</div>
