@@ -3,4 +3,3 @@
 
 export const SITE_TITLE = 'Glorious Oblivion';
 export const SITE_DESCRIPTION = 'A personal weblog by Gary Peck — technical notes, observations, and links worth keeping from elsewhere on the web.';
-export const SITE_TAGLINE = 'A record of intrusions.';
