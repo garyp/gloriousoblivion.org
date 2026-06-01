@@ -48,14 +48,14 @@ const { title, description, pubDate, updatedDate, heroImage, comments } = Astro.
 				</h1>
 				{description && (
 					<p
-						class="text-lg md:text-xl max-w-xl mx-auto mb-6"
-						style="color: var(--text-secondary); font-family: var(--font-display); font-style: italic; line-height: 1.4;"
+						class="text-base md:text-lg max-w-xl mx-auto mb-6"
+						style="color: var(--text-secondary); font-family: var(--font-display); line-height: 1.5;"
 					>
 						{description}
 					</p>
 				)}
 				<div class="ornament" aria-hidden="true">
-					<span class="ornament-mark">&#10086;</span>
+					<span class="ornament-mark">&#8258;</span>
 				</div>
 			</header>
 		</div>
@@ -65,7 +65,7 @@ const { title, description, pubDate, updatedDate, heroImage, comments } = Astro.
 				<slot />
 			</div>
 			<div class="ornament mt-16 mb-8" aria-hidden="true">
-				<span class="ornament-mark">&#10086;</span>
+				<span class="ornament-mark">&#8258;</span>
 			</div>
 			{comments && <Comments comments={comments} />}
 		</div>

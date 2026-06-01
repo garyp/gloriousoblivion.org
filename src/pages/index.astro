@@ -6,35 +6,40 @@ import { getCollection } from 'astro:content';
 
 const recentPosts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-	.slice(0, 4);
+	.slice(0, 5);
 ---
 
 <BaseLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<section class="pt-6 pb-12">
-		<p class="eyebrow mb-6">Est. 2007 &middot; Gary Peck</p>
-		<h1 class="font-display text-4xl md:text-6xl leading-[1.05] tracking-tight mb-8" style="font-family: var(--font-display);">
-			A quiet shelf for
-			<em class="italic" style="color: var(--ember);">glorious oblivion</em>&nbsp;—
-			<span style="color: var(--text-secondary);">notes kept against the dark.</span>
+		<p class="eyebrow mb-6">Est. 2007</p>
+		<h1
+			class="text-4xl md:text-6xl leading-[1.05] tracking-tight mb-8"
+			style="font-family: var(--font-display);"
+		>
+			A record of what
+			<em class="italic" style="color: var(--ember);">intrudes</em>.
 		</h1>
-		<p class="text-lg md:text-xl leading-relaxed max-w-2xl" style="color: var(--text-secondary); font-family: var(--font-display);">
-			Essays, fragments, and forgotten technical solutions. Sometimes useful. Sometimes only remembered.
-			Read at the pace of a long evening.
+		<p
+			class="text-lg md:text-xl leading-relaxed max-w-2xl"
+			style="color: var(--text-secondary); font-family: var(--font-display);"
+		>
+			A personal weblog by Gary Peck. Mostly technical notes,
+			kept happily and intermittently since 2007.
 		</p>
 	</section>
 
 	<div class="ornament my-10" aria-hidden="true">
-		<span class="ornament-mark">&#10086;</span>
+		<span class="ornament-mark">&#8258;</span>
 	</div>
 
 	<section class="pb-12">
 		<div class="flex items-baseline justify-between mb-6">
-			<h2 class="kicker">From the archive</h2>
+			<h2 class="kicker">Recent notes</h2>
 			<a href="/blog/" class="text-sm no-underline" style="color: var(--text-muted);"
 				onmouseover="this.style.color='var(--ember)'"
 				onmouseout="this.style.color='var(--text-muted)'"
 			>
-				All writing &rarr;
+				All notes &rarr;
 			</a>
 		</div>
 

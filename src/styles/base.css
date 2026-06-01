@@ -90,21 +90,21 @@
 }
 
 .dark {
-	/* -- Palette: Dark (Midnight & Moonlight) -- */
+	/* -- Palette: Dark (a dim, warm room) -- */
 	--ink: #E8DFD0;
 	--ink-soft: #B5A998;
 	--ink-faded: #7A6F60;
 
-	--parchment: #0F1419;
-	--parchment-deep: #161C24;
-	--parchment-pale: #1F2731;
+	--parchment: #14110D;
+	--parchment-deep: #1D1813;
+	--parchment-pale: #26201A;
 
 	--ember: #E07A57;
 	--ember-deep: #C9603F;
 	--gilt: #DDB970;
 
-	--rule: #2A323D;
-	--rule-soft: #232B36;
+	--rule: #2D2720;
+	--rule-soft: #251F19;
 
 	--bg-primary: var(--parchment);
 	--bg-secondary: var(--parchment-deep);

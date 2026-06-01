@@ -18,19 +18,19 @@ const postsByYear = posts.reduce((acc, post) => {
 const years = Object.keys(postsByYear).map(Number).sort((a, b) => b - a);
 ---
 
-<BaseLayout title={`Writing — ${SITE_TITLE}`} description={SITE_DESCRIPTION} containerWidth="wide">
+<BaseLayout title={`Notes — ${SITE_TITLE}`} description={SITE_DESCRIPTION} containerWidth="wide">
 	<header class="pt-6 pb-10 text-center">
-		<p class="eyebrow mb-4">The archive</p>
+		<p class="eyebrow mb-4">All notes</p>
 		<h1 class="text-4xl md:text-5xl mb-3" style="font-family: var(--font-display);">
-			Writing, in <em class="italic">reverse</em>.
+			Everything, in <em class="italic">reverse</em>.
 		</h1>
-		<p class="text-base md:text-lg max-w-xl mx-auto" style="color: var(--text-secondary); font-family: var(--font-display); font-style: italic;">
-			{posts.length} pieces, collected across the years.
+		<p class="text-base md:text-lg max-w-xl mx-auto" style="color: var(--text-secondary); font-family: var(--font-display);">
+			{posts.length} notes, accumulated across the years.
 		</p>
 	</header>
 
 	<div class="ornament mb-12" aria-hidden="true">
-		<span class="ornament-mark">&#10086;</span>
+		<span class="ornament-mark">&#8258;</span>
 	</div>
 
 	<section>
